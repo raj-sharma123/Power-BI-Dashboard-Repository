@@ -4,11 +4,15 @@ This repository hosts a variety of Power BI dashboards built to deliver impactfu
 
 ## 📦 Dashboard Projects Included
 
-- 📊 Sales Insights Dashboard
-- 🧾 Financial Summary Dashboard
-- 🏢 Employee Engagement Dashboard
-- 📣 Marketing ROI Dashboard
-- 📍 Geo Analysis Dashboard
+📊 Sales Insights Dashboard
+
+🧾 Financial Summary Dashboard
+
+🏢 Employee Engagement Dashboard
+
+📣 Marketing ROI Dashboard
+
+📍 Geo Analysis Dashboard
 
 ## 📁 Folder Structure
 
