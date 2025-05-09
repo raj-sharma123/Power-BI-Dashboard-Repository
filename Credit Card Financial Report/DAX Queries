@@ -1,0 +1,52 @@
+Adding New Columns:
+
+AgeGroup = SWITCH(
+TRUE(),
+'cust_detail'[customer_age] < 30, "20-30",
+'cust_detail'[customer_age] >= 30 && 'cust_detail'[customer_age] < 40, "30-40",
+'cust_detail'[customer_age] >= 40 && 'cust_detail'[customer_age] < 50, "40-50",
+'cust_detail'[customer_age] >= 50 && 'cust_detail'[customer_age] < 60, "50-60",
+'cust_detail'[customer_age] >= 60, "60+",
+"unknown"
+)
+
+---
+
+IncomeGroup = SWITCH(
+TRUE(),
+'cust_detail'[income] < 35000, "Low",
+'cust_detail'[income] >= 35000 && 'cust_detail'[income] <70000, "Medium",
+'cust_detail'[income] >= 70000, "High",
+"unknown"
+)
+
+---
+
+week_num2 = WEEKNUM('cc_detail'[week_start_date])
+
+---
+
+Revenue = 'cc_detail'[annual_fees] + 'cc_detail'[total_trans_amt] + 'cc_detail'[interest_earned]
+
+---
+
+
+-- Adding New Measure:
+
+Current_week_Reveneue = CALCULATE(
+SUM('cc_detail'[Revenue]),
+FILTER(
+    ALL('cc_detail'),
+    'cc_detail'[week_num2] = MAX('cc_detail'[week_num2])
+    )
+)
+
+---
+
+Previous_week_Reveneue = CALCULATE(
+SUM('cc_detail'[Revenue]),
+FILTER(
+    ALL('cc_detail'),
+    'cc_detail'[week_num2] = MAX('cc_detail'[week_num2])-1
+    )
+)
