@@ -8,7 +8,7 @@ This repository hosts a variety of Power BI dashboards built to deliver impactfu
 
 🧾 Financial Summary Dashboard
 
-🏢 Employee Engagement Dashboard
+🏛️ Bank Loan Report Dashboard
 
 📣 Marketing ROI Dashboard
 
